@@ -49,6 +49,10 @@ app.post('/api/login', function (req, res) {
         res.send(422,{message:'yo! you miss`n some stuff!'});
 });
 
+app.post('/change',function(req,res){
+	password = req.body.newPassword
+console.log(password);
+})
 
 var serve = staticFiles('public/', {'index': ['index.html']});
 app.use(serve);

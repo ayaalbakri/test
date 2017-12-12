@@ -10,4 +10,5 @@ This is a list of recommendations to make this project better
 
 3.adding session in server side to make web site secure
 
-4.no bugs
+4.no bugslogin 
+5. add new raout change to take a change password but because no database and orm i didnt save it (adding change in LoginCtrl and server ) the name of routing "/change"
