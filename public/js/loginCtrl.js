@@ -1,6 +1,5 @@
 
 loginApp.controller('loginCtrl',['$scope','$http',($scope,$http) => {
-
     $scope.login= () =>
     {
         $http.post('/api/login', {email:$scope.email , password:$scope.password}).then(r => {
@@ -13,10 +12,12 @@ console.log($scope.user)
 	 $scope.change= () =>
     {
         $http.post('/change', {newPassword:$scope.newPassword}).then(r => {
-            $scope.user = r.data;
-console.log($scope.user)
+            $scope.change = r.data;
+           console.log($scope.change)
+           $scope.newPassword = "";
+
         }, e => {
-            $scope.errorMessage = e.data.message;
+            console.log(e)
         });
     }
 	
